@@ -2,7 +2,10 @@ import { useState } from "react";
 
 export default function Terminal() {
   const [input, setInput] = useState("");
-  const [output, setOutput] = useState([]);
+  const [output, setOutput] = useState([
+    "Welcome to AyanOS Terminal",
+    "Type 'help' to see available commands",
+  ]);
 
   const commands = {
     help: `
@@ -68,6 +71,7 @@ clear
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          placeholder="Want help? Type 'help' and press Enter..."
           style={{
             background: "#161b22",
             color: "white",
