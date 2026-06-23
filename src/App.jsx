@@ -1,11 +1,10 @@
 import { useState } from "react";
-
 import BootScreen from "./components/BootScreen";
 import Sidebar from "./components/Sidebar";
 import TopBar from "./components/TopBar";
 import Tabs from "./components/Tabs";
 import Terminal from "./components/Terminal";
-
+import Projects from "./pages/Projects";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
@@ -37,6 +36,7 @@ export default function App() {
         style={{
           display: "flex",
           height: "calc(100vh - 45px)",
+          overflow: "hidden",
         }}
       >
         <Sidebar
@@ -58,8 +58,11 @@ export default function App() {
               flex: 1,
               padding: "25px",
               overflowY: "auto",
+              background: "#0d1117",
+              minHeight: "100%",
             }}
           >
+          
             {page === "dashboard.sys" && (
               <Dashboard />
             )}
@@ -81,10 +84,7 @@ export default function App() {
             )}
 
             {page === "projects.jsx" && (
-              <div>
-                <h1>projects.jsx</h1>
-                <p>Projects coming soon...</p>
-              </div>
+              <Projects />
             )}
 
             {page === "resume.pdf" && (

@@ -1,3 +1,25 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d1117;
+  color: white;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+/* Dashboard Cards */
+
 .card {
   background: #161b22;
   border: 1px solid #30363d;
@@ -20,8 +42,7 @@
 }
 
 .card h3 {
-  margin: 0;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
   font-size: 1.1rem;
 }
 
@@ -39,4 +60,73 @@
 
 .status-green {
   color: #3fb950;
+}
+
+/* Projects */
+
+.project-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  padding: 22px;
+
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #58a6ff;
+}
+
+.project-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.project-tech {
+  color: #58a6ff;
+  margin-bottom: 15px;
+}
+
+/* Terminal */
+
+.terminal-input {
+  width: 100%;
+  padding: 10px;
+
+  background: #0d1117;
+  color: white;
+
+  border: 1px solid #30363d;
+  border-radius: 6px;
+
+  outline: none;
+}
+
+.terminal-input:focus {
+  border-color: #58a6ff;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #58a6ff;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
