@@ -2,8 +2,9 @@ const files = [
   "dashboard.sys",
   "about.ts",
   "skills.json",
-  "projects.jsx",
   "timeline.md",
+  "terminal.exe",
+  "projects.jsx",
   "resume.pdf",
   "contact.md"
 ];
