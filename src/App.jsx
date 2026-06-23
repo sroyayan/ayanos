@@ -9,6 +9,8 @@ import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Timeline from "./pages/Timeline";
+import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
 
 export default function App() {
   const [bootFinished, setBootFinished] = useState(false);
@@ -88,17 +90,11 @@ export default function App() {
             )}
 
             {page === "resume.pdf" && (
-              <div>
-                <h1>resume.pdf</h1>
-                <p>Resume coming soon...</p>
-              </div>
+              <Resume />
             )}
 
             {page === "contact.md" && (
-              <div>
-                <h1>contact.md</h1>
-                <p>Contact section coming soon...</p>
-              </div>
+              <Contact />
             )}
           </main>
         </div>
