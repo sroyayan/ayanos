@@ -19,6 +19,48 @@ export default function Sidebar({ setPage, currentPage }) {
         padding: "20px",
       }}
     >
+        <img
+  src="/profile.jpg"
+  alt="Ayan"
+  style={{
+    width: "200px",
+    height: "200px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    border: "3px solid #58a6ff",
+    display: "block",
+    margin: "0 auto 10px",
+  }}
+/>
+
+<h3
+  style={{
+    textAlign: "center",
+    margin: "0",
+  }}
+>
+  Ayan Singha Roy
+</h3>
+
+<p
+  style={{
+    textAlign: "center",
+    color: "#8b949e",
+    marginTop: "5px",
+  }}
+>
+  CSE (AI & ML)
+</p>
+
+<p
+  style={{
+    textAlign: "center",
+    color: "#3fb950",
+    fontWeight: "bold",
+  }}
+>
+  ● ONLINE
+</p>
       <h2
         style={{
           textAlign: "center",
