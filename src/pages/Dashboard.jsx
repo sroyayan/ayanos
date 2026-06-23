@@ -1,7 +1,19 @@
 export default function Dashboard() {
   return (
-    <div>
-      <h1>Ayan Singha Roy</h1>
+    <div
+      style={{
+        textAlign: "center",
+        marginTop: "40px",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "3rem",
+          marginBottom: "10px",
+        }}
+      >
+        Ayan Singha Roy
+      </h1>
 
       <h2>Software Engineer in Training</h2>
 

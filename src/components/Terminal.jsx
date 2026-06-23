@@ -13,7 +13,7 @@ clear
 `,
     about: "Ayan Singha Roy | AIML Student",
     skills: "Python, JavaScript, Git, React",
-    timeline: "2024 -> 2026 Journey Loaded"
+    timeline: "2024 -> 2026 Journey Loaded",
   };
 
   const handleCommand = (e) => {
@@ -27,25 +27,54 @@ clear
 
     setOutput([
       ...output,
-      `> ${input}`,
-      commands[input] || "Command not found"
+      `guest@ayanos:~$ ${input}`,
+      commands[input] || "Command not found",
     ]);
 
     setInput("");
   };
 
   return (
-    <div>
-      <h1>terminal.exe</h1>
+    <div
+      style={{
+        background: "#010409",
+        minHeight: "500px",
+        padding: "20px",
+        borderRadius: "10px",
+        fontFamily: "monospace",
+        textAlign: "left",
+      }}
+    >
+      <h1
+        style={{
+          marginBottom: "20px",
+        }}
+      >
+        terminal.exe
+      </h1>
 
       {output.map((line, index) => (
-        <div key={index}>{line}</div>
+        <div
+          key={index}
+          style={{
+            marginBottom: "5px",
+          }}
+        >
+          {line}
+        </div>
       ))}
 
       <form onSubmit={handleCommand}>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          style={{
+            background: "#161b22",
+            color: "white",
+            border: "1px solid #30363d",
+            padding: "8px",
+            width: "300px",
+          }}
         />
       </form>
     </div>

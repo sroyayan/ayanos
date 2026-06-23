@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import BootScreen from "./components/BootScreen";
 import Sidebar from "./components/Sidebar";
+import TopBar from "./components/TopBar";
+import Tabs from "./components/Tabs";
 import Terminal from "./components/Terminal";
 
 import Dashboard from "./pages/Dashboard";
@@ -24,43 +26,83 @@ export default function App() {
   return (
     <div
       style={{
-        display: "flex",
         height: "100vh",
         background: "#0d1117",
         color: "white",
       }}
     >
-      <Sidebar setPage={setPage} />
+      <TopBar />
 
-      <main
+      <div
         style={{
-          flex: 1,
-          padding: "20px",
-          overflowY: "auto",
+          display: "flex",
+          height: "calc(100vh - 45px)",
         }}
       >
-        {page === "dashboard.sys" && <Dashboard />}
+        <Sidebar
+          setPage={setPage}
+          currentPage={page}
+        />
 
-        {page === "about.ts" && <About />}
+        <div
+          style={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Tabs page={page} />
 
-        {page === "skills.json" && <Skills />}
+          <main
+            style={{
+              flex: 1,
+              padding: "25px",
+              overflowY: "auto",
+            }}
+          >
+            {page === "dashboard.sys" && (
+              <Dashboard />
+            )}
 
-        {page === "timeline.md" && <Timeline />}
+            {page === "about.ts" && (
+              <About />
+            )}
 
-        {page === "terminal.exe" && <Terminal />}
+            {page === "skills.json" && (
+              <Skills />
+            )}
 
-        {page === "projects.jsx" && (
-          <h1>Projects Coming Soon...</h1>
-        )}
+            {page === "timeline.md" && (
+              <Timeline />
+            )}
 
-        {page === "resume.pdf" && (
-          <h1>Resume Coming Soon...</h1>
-        )}
+            {page === "terminal.exe" && (
+              <Terminal />
+            )}
 
-        {page === "contact.md" && (
-          <h1>Contact Coming Soon...</h1>
-        )}
-      </main>
+            {page === "projects.jsx" && (
+              <div>
+                <h1>projects.jsx</h1>
+                <p>Projects coming soon...</p>
+              </div>
+            )}
+
+            {page === "resume.pdf" && (
+              <div>
+                <h1>resume.pdf</h1>
+                <p>Resume coming soon...</p>
+              </div>
+            )}
+
+            {page === "contact.md" && (
+              <div>
+                <h1>contact.md</h1>
+                <p>Contact section coming soon...</p>
+              </div>
+            )}
+          </main>
+        </div>
+      </div>
     </div>
   );
 }
